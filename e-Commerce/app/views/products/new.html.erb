@@ -1,0 +1,24 @@
+<html>
+  <h1>Add Product</h1>
+  <body>
+
+    <%= form_tag products_path do %>
+
+
+        <%= label :product, :name, 'Name' %>
+        <%= text_field :product, 'name' %>
+
+        <%= label :product, :price, 'Price' %>
+        <%= text_field :product, 'price' %>
+
+        <%= label :product, :comment, 'Comment' %>
+        <%= text_field :product, 'comment' %>
+
+
+        <%= submit_tag 'Add' %>
+
+    <% end %>
+
+
+  </body>
+</html>

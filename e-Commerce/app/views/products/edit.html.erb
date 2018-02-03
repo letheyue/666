@@ -1,0 +1,11 @@
+<h1>Edit <%= "#{@product.name}" %></h1>
+<%= form_tag product_path(@product), :method => :put do %>
+    <%= label :product, :name, 'Name' %>
+    <%= text_field :product, 'name' %>
+    <%= label :product, :price, 'Price' %>
+    <%= text_field :product, 'price' %>
+    <%= label :product, :comment, 'Comment' %>
+    <%= text_field :product, 'comment' %>
+
+    <%= submit_tag 'Update Product Info' %>
+<% end %>

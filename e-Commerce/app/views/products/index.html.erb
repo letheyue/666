@@ -1,0 +1,40 @@
+<h1>Products List</h1>
+<table id="products">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Comment</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search product's name or price or comments" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+  <% @products.each do |p| %>
+      <tr>
+        <td>
+          <%= p.name %>
+        </td>
+        <td>
+          <%= "#{p.price} $ " %>
+        </td>
+        <td>
+          <%= p.comment %>
+        </td>
+        <td>
+          <%= button_to "Edit", edit_product_path(p), :method => :get %>
+        </td>
+        <td>
+          <%= button_to "Delete", product_path(p), :method => :delete,:data =>{:confirm => 'Are you sure?'} %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= button_to 'New Product', new_product_path, :method => :get %>

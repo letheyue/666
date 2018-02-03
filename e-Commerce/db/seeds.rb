@@ -1,0 +1,5 @@
+product1 = Product.create({:name => 'Apple', :price => '5', :comment => 'American Apple'})
+product2 = Product.create({:name => 'Pear', :price => '4', :comment => 'Yantai Pear'})
+product3 = Product.create({:name => 'Stawberry', :price => '10', :comment => 'Fresh stawberry'})
+product4 = Product.create({:name => 'Pineapple', :price => '2', :comment => 'Xi Xi'})
+product5 = Product.create({:name => 'Big Gift', :price => '888', :comment => 'Guess what?'})

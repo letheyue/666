@@ -1,0 +1,30 @@
+table#products {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#products th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: gray;
+}
+table#products th, table#products td {
+  padding: 4px;
+  text-align: left;
+}
+table#products th.hilite{
+  background-color: brown;
+}
+#notice #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: black;
+
+}
